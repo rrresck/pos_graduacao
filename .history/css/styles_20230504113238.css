@@ -53,13 +53,15 @@ body {
 
 #secao1 {
     float: left;
-    width: 65%;
+    width: 70%;
     background-color: greenyellow;
     margin: 10px;
 }
 
 #secao2 {
     float: left;
+    position: fixed;
+    right: 10px;
     width: 25%;
     background-color: yellow;
     margin: 10px;
