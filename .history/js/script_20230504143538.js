@@ -11,7 +11,7 @@ function renderizarTarefas() {
         let itemLista = document.createElement('li');
         itemLista.setAttribute('class', 'list-group-item list-group-item-action');
         itemLista.onclick = function(){
-            deletarTarefa(this);
+            deletarTarefa(this)
         }
 
         let itemTexto = document.createTextNode(tarefa);
@@ -39,21 +39,4 @@ btn.onclick = function() {
         span.appendChild(msg);
         card.appendChild(span);
     }
-}
-
-function removerSpans(){
-    let spans = document.querySelectorAll('span');
-    for(let i = 0; i < spans.length; i++){
-        card.removeChild(spans[i]);
-    }
-}
-
-function deletarTarefa(tar){
-    tarefas.splice(tarefas.indexOf(tar.textContent), 1);
-    renderizarTarefas();
-    salvarDadosNoStorage();
-}
-
-function salvarDadosNoStorage(){
-    localStorage.setItem('tarefas', JSON.stringify(tarefas));
 }
